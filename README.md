@@ -14,6 +14,44 @@ This project deploys WordPress on AWS with an Application Load Balancer, Auto Sc
 - S3 bucket mounted at `/var/www/html/wp-content/uploads` on every EC2 instance
 - Custom WordPress homepage so the Ubuntu default page does not appear
 
+## Architecture 
+
+```text 
+Wordpress-S3FS-TF/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── terraform.tfvars.example
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── modules/
+│   ├── networking/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   ├── compute/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │   └── templates/
+│   │       └── user_data.sh.tpl
+│   ├── database/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   └── storage/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+├── scripts/
+│   ├── install-wordpress.sh
+│   └── mount-s3fs.sh
+└── wp-config/
+    └── wp-config.php.tpl
+
+```
+
 ## Before Running
 
 Update `terraform.tfvars` before apply:
