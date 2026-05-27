@@ -1,4 +1,4 @@
-# WordPress on AWS with Terraform
+# WordPress on AWS with Terraform and S3 bucket mounted as filesystem
 
 This project deploys WordPress on AWS with an Application Load Balancer, Auto Scaling Group, private RDS MySQL database, and an S3 bucket mounted as a filesystem on every EC2 instance with `s3fs-fuse`.
 
@@ -190,3 +190,34 @@ The Auto Scaling Group includes an instance refresh, so launch template changes 
 - Your ACM certificate must be in `us-west-2`, the same region as the ALB. The ARN provided is used, not just the certificate ID.
 - WordPress uploads are stored in S3 through the mount at `/var/www/html/wp-content/uploads`.
 - EC2 instances are private; use SSM Session Manager or a bastion/VPN for access.
+
+## 🤝 Contribution
+
+Pull requests are welcome. For major changes, please open an issue first.
+
+## 👨‍💻 Author
+
+**Joseph Mbatchou**
+
+• DevOps / Cloud / Platform  Engineer   
+• Content Creator / AWS Builder
+
+## 🔗 Connect With Me
+
+🌐 Website: [https://platform.joebahocloud.com](https://platform.joebahocloud.com)
+
+💼 LinkedIn: [https://www.linkedin.com/in/josephmbatchou/](https://www.linkedin.com/in/josephmbatchou/)
+
+🐦 X/Twitter: [https://www.twitter.com/Joebaho237](https://www.twitter.com/Joebaho237)
+
+▶️ YouTube: [https://www.youtube.com/@josephmbatchou5596](https://www.youtube.com/@josephmbatchou5596)
+
+🔗 Github: [https://github.com/Joebaho](https://github.com/Joebaho)
+
+📦 Dockerhub: [https://hub.docker.com/u/joebaho2](https://hub.docker.com/u/joebaho2)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — see the LICENSE file for details.
