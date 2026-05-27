@@ -6,6 +6,5 @@ crash.*.log
 *.tfplan
 tfplan
 .DS_Store
-
-# Keep real secrets local. Use terraform.tfvars.example as the shared template.
 terraform.tfvars
+.terraform.lock.hcl
